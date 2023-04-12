@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Draw</title>
+    <link rel="stylesheet" href="index copy.css">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="Imiges/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Imiges/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Imiges/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Imiges/favicon-16x16.png">
+    <link rel="manifest" href="Imiges/site.webmanifest">
+    <link rel="mask-icon" href="Imiges/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff"> -->
+    <link rel="icon" href="Imiges/favicon.ico">
+
+</head>
+
+<body>
+    <div id="changeCellCount" class="changeCellElementsCount">
+        <label for="color">BackGround-Color</label>
+        <br>
+        <input type="color" name="color" id="backColor" value="#ffffff">
+        <br>
+        <button class="button " type="button" onclick="backGroundColor ()">SUBMIT!</button>
+        <br>
+        <label style="margin-right: 9px;">Width</label>
+
+        <input style=" width: 60px;" type="text" id="width">
+        <br>
+        <label style="margin-right: 9px;">Height</label>
+
+        <input style="width: 60px;" type="text" id="height">
+        <br>
+        <br>
+        <button class="button " type="button" onclick="newCellCount()">SUBMIT!</button>
+        <br>
+        <div>
+            <button class="btn" id="canvasDownload" onclick="canvasDownload() ">Download Picture</button>
+            <button id="forSave " class="btn" onclick="clickForSave()"> Save</button>
+        </div>
+
+    </div>
+    <div class="fatherPixels">
+        <div id="pixels"></div>
+        <br>
+        <canvas id="canvas" style="border: 0.5px solid; visibility: hidden; "></canvas>
+
+        <br>
+        <!-- <a id="myConvas" href="#" download="New_Canvas.png">Download Picture</a> -->
+
+    </div>
+    <div id="colors">
+        <div class="colorsRow">
+            <div class="colorsRow">
+                <div class="colorsDiv" id="transparent" style="background-color: none ;" onclick="selectRetin()">
+                    <input type="image" alt="Retin" src="Imiges/images.jfif" style="height: 20px; width: 20px;">
+                </div>
+
+            </div>
+
+            <div class="colorsDiv" id="blue" style="background-color: blue;" onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="yellow" style="background-color: yellow;" onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="green" style="background-color: green;" onclick="selectColor(this)">
+            </div>
+        </div>
+
+        <div class="colorsRow">
+
+            <div class="colorsDiv" id="grey" style="background-color: grey;" onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="pink" style="background-color: pink;" onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="lime" style="background-color: lime;" onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="brown" style="background-color: brown;" onclick="selectColor(this)">
+            </div>
+        </div>
+
+        <div class="colorsRow">
+            <div class="colorsDiv" id="LightCoral" style="background-color: LightCoral;" onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="black" style="background-color: black; border: 3px rgb(0, 85, 255) solid;"
+                onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="Teal" style="background-color: Teal;" onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="darkBlue" style="background-color: darkblue;" onclick="selectColor(this)">
+            </div>
+        </div>
+        <div class="colorsRow">
+            <div class="colorsDiv" id="cyan" style="background-color: cyan;" onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="Orchid" style="background-color: Orchid;" onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="DeepPink" style="background-color: DeepPink;" onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="Orange" style="background-color: Orange;" onclick="selectColor(this)">
+            </div>
+
+        </div>
+
+
+        <div class="colorsRow">
+            <div class="colorsDiv" id="Indigo" style="background-color: Indigo;" onclick="selectColor(this)">
+            </div>
+            <div class="colorsDiv" id="MediumSeaGreen" style="background-color: MediumSeaGreen;"
+                onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="DarkOliveGreen" style="background-color: DarkOliveGreen;"
+                onclick="selectColor(this)"></div>
+            <div class="colorsDiv" id="SkyBlue" style="background-color: SkyBlue;" onclick="selectColor(this)">
+            </div>
+
+        </div>
+        <div id="last"></div>
+        <div style="height: 20px;  display: flex; margin-left: 5px;">
+            <label style="margin-right: 9px;" for="userId">Hex</label>
+            <input style="width: 60px;" type="text" id="colorHex" name="userId">
+            <button class="button" type="button" onclick="buttonWhatMakeColor()">OK</button>
+        </div>
+    </div>
+    <p><cite>The Lesson</cite> by Arthur. Created in 2023.</p>
+    <address>
+        Written by <a href="mailto:artur_poghosyan_2000@mail.ru">Arthur</a>.<br>
+        Visit us at:https://www.instagram.com/art146/ <br>
+        Example.com<br>
+        Shinararner 10/1, Zvartnoc<br>
+        ARM
+    </address>
+    <script src="index copy.js"></script>
+
+
+</body>
+
+</html>
